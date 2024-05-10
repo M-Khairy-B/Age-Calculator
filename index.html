@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="icon" href="img/calculator-icon-design-free-vector.jpg">
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="h-screen flex items-center justify-center bg-[#dbdbdb]">
+    <div
+      class="bg-white w-[600px] rounded-tl-2xl rounded-br-[10rem] rounded-tr-2xl rounded-bl-2xl"
+    >
+      <div class="p-8 flex flex-col">
+        <form class="flex flex-col">
+          <div class="flex gap-8">
+            <div class="flex flex-col">
+              <label class="uppercase font-[600]" for="day">Day</label>
+              <input
+                class="w-24 p-2 border-[1px] border-[solid] border-[#dbdbdb] flex items-center text-[1.5rem] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none placeholder:text-[1.5rem] font-[800]"
+                type="number"
+                id="day"
+                placeholder="DD"
+              />
+              <small class="text-red-700"></small>
+            </div>
+            <div class="flex flex-col">
+              <label class="uppercase font-[600]" for="month">MoNth</label>
+              <input
+                class="w-24 p-2 border-[1px] border-[solid] border-[#dbdbdb] flex items-center text-[1.5rem] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none placeholder:text-[1.5rem] font-[800]"
+                type="number"
+                id="month"
+                placeholder="MM"
+              />
+              <small class="text-red-700"></small>
+            </div>
+            <div class="flex flex-col">
+              <label class="uppercase font-[600]" for="year">Year</label>
+              <input
+                class="w-24 p-2 border-[1px] border-[solid] border-[#dbdbdb] flex items-center text-[1.5rem] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none placeholder:text-[1.5rem] font-[800]"
+                type="number"
+                id="year"
+                placeholder="YY"
+              />
+              <small class="text-red-700"></small>
+            </div>
+          </div>
+          <div class="flex items-center relative  py-2 md:py-0">
+            <hr class="w-full absolute md:relative " />
+            <button
+              type="submit"
+              class="rounded-[50%] p-4 bg-[#A020F0] border-none cursor-pointer flex items-center justify-center relative top-[50%] left-[50%] -translate-x-1/2 md:relative md:top-0 md:left-0  md:translate-x-0 ]"
+            >
+              <img src="img/icon-arrow.svg" alt="icon" />
+            </button>
+          </div>
+        </form>
+        <div class="output">
+          <h1 class="text-[5rem] font-[800] italic h-[fit-content]">
+            <span class="text-[#A020F0]" id="YY">--</span>Years
+          </h1>
+          <h1 class="text-[5rem] font-[800] italic h-[fit-content]">
+            <span class="text-[#A020F0]" id="MM">--</span>Month
+          </h1>
+          <h1 class="text-[5rem] font-[800] italic h-[fit-content]">
+            <span class="text-[#A020F0]" id="DD">--</span>Days
+          </h1>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
