@@ -57,26 +57,26 @@ function validate() {
 //--------------------Submit------------------------------
 
 function handleSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
   if (validate()) {
-    if (dayInp.value > day) {
-      day = day + months[month - 1];
-      month = month - 1;
-    }
-    if (monthInp.value > month) {
-      month = month + 12;
-      year = year - 1;
-    }
+      let DD = day - dayInp.value;
+      let MM = month - monthInp.value;
+      let YY = year - yearInp.value;
 
-    let DD = day - dayInp.value;
-    let MM = month - monthInp.value;
-    let YY = year - yearInp.value;
+      if (DD < 0) {
+          MM--; // Reduce the month by 1
+          DD += months[month - 1]; // Add the days of the previous month
+      }
 
-    dayOtp.innerHTML = DD;
-    monthOtp.innerHTML = MM;
-    yearOtp.innerHTML = YY;
+      if (MM < 0) {
+          YY--; // Reduce the year by 1
+          MM += 12; // Add 12 months to the months difference
+      }
+
+      dayOtp.innerHTML = DD;
+      monthOtp.innerHTML = MM;
+      yearOtp.innerHTML = YY;
   }
 }
-
 
 form.addEventListener("submit", handleSubmit);
